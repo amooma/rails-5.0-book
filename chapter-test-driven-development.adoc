@@ -68,12 +68,12 @@ created a few tests (they are easy to recognise because the word `test`
 is in the file name).
 
 The complete test suite of a Rails project is processed with the command
-`rails test`. Let’s have a go and see what a test produces at this stage
+`rake test`. Let’s have a go and see what a test produces at this stage
 of development:
 
 [subs=+quotes]
 ----
-$ **rails test**
+$ **rake test**
 Running via Spring preloader in process 48169
 Run options: --seed 30780
 
@@ -106,11 +106,11 @@ class User < ApplicationRecord
 end
 ----
 
-Then we execute `rails test` again:
+Then we execute `rake test` again:
 
 [subs=+quotes]
 ----
-$ **rails test**
+$ **rake test**
 Running via Spring preloader in process 48284
 Run options: --seed 61281
 
@@ -132,7 +132,7 @@ Finished in 0.305897s, 22.8835 runs/s, 32.6908 assertions/s.
 Boom! This time we have `1 failures`. The error happens in the
 `should create user` and the `should update user`. The
 explanation for this is in our validation. The example data created by
-the scaffold generator went through in the first `rails test` (without
+the scaffold generator went through in the first `rake test` (without
 validation). The errors only occurred the second time (with validation).
 
 This example data is created as _fixtures_tests tests
@@ -175,11 +175,11 @@ two:
   birthday: 2015-12-27
 ----
 
-Now, a `rails test` completes without any errors again:
+Now, a `rake test` completes without any errors again:
 
 [subs=+quotes]
 ----
-$ **rails test**
+$ **rake test**
 Running via Spring preloader in process 48169
 Run options: --seed 3341
 
@@ -215,7 +215,7 @@ our changes (you really can’t do that often enough):
 
 [subs=+quotes]
 ----
-$ **rails test**
+$ **rake test**
 
 # Running:
 
@@ -298,7 +298,7 @@ that - if present - is started by Rails before each test. The opposite
 of setup is `teardown`. A `teardown` - if present - is called automatically
 after each test.
 
-NOTE: For every test (in other words, at each run of `rails test`), a
+NOTE: For every test (in other words, at each run of `rake test`), a
       fresh and therefore empty test database is created automatically. This
       is a different database than the one that you access by default via
       `rails console` (that is the development database). The databases are
@@ -417,11 +417,11 @@ end
 This test checks if a newly created User that does not contain any data
 is valid (it shouldn't be).
 
-So a `rails test` then completes immediately:
+So a `rake test` then completes immediately:
 
 [subs=+quotes]
 ----
-$ **rails test:units**
+$ **rake test:units**
 Running via Spring preloader in process 48169
 Run options: --seed 43319
 
@@ -455,11 +455,11 @@ class UserTest < ActiveSupport::TestCase
 end
 ----
 
-Then once more a `rails test`:
+Then once more a `rake test`:
 
 [subs=+quotes]
 ----
-$ **rails test:units**
+$ **rake test test:units**
 Running via Spring preloader in process 48169
 Run options: --seed 11674
 
@@ -583,7 +583,7 @@ Let’s run all tests:
 
 [subs=+quotes]
 ----
-$ **rails test**
+$ **rake test**
 Running via Spring preloader in process 48169
 Run options: --seed 47618
 
