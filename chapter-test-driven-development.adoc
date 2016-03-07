@@ -57,7 +57,7 @@ $ **rails generate scaffold user login_name first_name last_name birthday:date**
       create      app/helpers/users_helper.rb
       invoke      test_unit
       [...]
-$ **rails db:migrate**
+$ **rake db:migrate**
       [...]
 ----
 
