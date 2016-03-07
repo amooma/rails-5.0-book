@@ -210,7 +210,7 @@ two:
   last_name: Scully
 ----
 
-To be on the safe side, let’s do another `rake test` after making
+To be on the safe side, let’s do another `rails test` after making
 our changes (you really can’t do that often enough):
 
 [subs=+quotes]
