@@ -246,7 +246,7 @@ bin/rails test test/controllers/users_controller_test.rb:19
 ----
 
 In the `UsersControllerTest` the User could not be created.
-The controller tests are located in the directory `test/functional/`.
+The controller tests are located in the directory `test/controllers/`.
 Let’s now take a good look at the file
 `test/controllers/users_controller_test.rb`
 
