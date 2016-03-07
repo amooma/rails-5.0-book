@@ -602,7 +602,7 @@ corresponding workflow, you can rely in future on the fact that it will
 run through and you don’t have to try it out manually in the browser as
 well.
 
-[[rake-stats]]
+[[rails-stats]]
 == rails stats
 
 rails stats With `rails stats` you get an overview of your Rails project.
